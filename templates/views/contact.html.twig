@@ -22,37 +22,37 @@
         </div>
     {% endfor %}
 
-    {% for message in app.flashes('erreur') %}
-    <div class="alert alert-danger">
-        {{ message }}
-    </div>
-    {% endfor %}
-
-    {{ form_start(form) }}
-
-    <label for="formView.firstname">Votre prénom</label>
-    {{ form_widget(form.firstname, {
-        'attr' : {'class': ''}}) }}
-    <br>
-    <label for="formView.name">Votre nom</label>
-    {{ form_widget(form.name, {
-        'attr' : {'class': ''}}) }}
     <br><br>
-    <label for="formView.phone">Votre numéro de téléphone</label>
-    {{ form_widget(form.phone,
-        {'attr' : {'class': ''}}) }}
-    <br>
-    <label for="formView.phone">Votre email</label>
-    {{ form_widget(form.mail,
-        {'attr' : { }}) }}
-    <br>
-    <label for="formView.phone">Votre message</label>
-    {{ form_widget(form.message,
-        {'attr' : { }}) }}
-    <br>
-    {{ form_widget(form.enregistrer,
-        {'attr' : {'class': 'btn btn-primary'}}) }}
 
-    {{ form_end(form) }}
+    <div class="contact">
+        {{ form_start(form) }}
 
+        <label for="formView.firstname">Votre prénom</label>
+        {{ form_widget(form.firstname, {
+            'attr' : {'class': 'firstNameContact'}}) }}
+        <br>
+        <label for="formView.name">Votre nom</label>
+        {{ form_widget(form.name, {
+            'attr' : {'class': 'nameContact'}}) }}
+        <br><br>
+        <label for="formView.phone">Votre numéro de téléphone</label>
+        {{ form_widget(form.phone,
+            {'attr' : {'class': 'phoneContact'}}) }}
+        <br>
+        <label for="formView.phone">Votre email</label>
+        {{ form_widget(form.mail,
+            {'attr' : {'class' : 'mailContact' }}) }}
+        <br>
+        <label for="formView.phone">Votre message</label>
+        {{ form_widget(form.message,
+            {'attr' : {'class' : 'messageContact' }}) }}
+        <br>
+        {{ form_widget(form.enregistrer,
+            {'attr' : {'class': 'btn btn-primary'}}) }}
+
+        {{ form_end(form) }}
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22647.28889781038!2d-0.5660105828089763!3d44.80300011230006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5526f212045a41%3A0x40665174816ee80!2zQsOoZ2xlcw!5e0!3m2!1sfr!2sfr!4v1583853354295!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <br><br>
 {% endblock content %}

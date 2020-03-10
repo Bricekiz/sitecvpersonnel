@@ -19,7 +19,7 @@ main {
     overflow: hidden;
     position: fixed;
     width: 100%;
-    height: auto;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -514,5 +514,27 @@ body, html {
 hr {
     margin: auto;
     width: 40%;
+}
+
+/* Contact */
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.firstNameContact, .nameContact, .phoneContact, .mailContact, .messageContact {
+    width: 100%;
+}
+
+.messageContact {
+    height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    .contact {
+        display: block;
+    }
 }
 
