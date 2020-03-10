@@ -1,0 +1,21 @@
+{% for message in app.flashes('success') %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+
+<div id="contactForm" class="container">
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col">{{ form_row(form.firstname, {'attr' : {'class' : 'firstContact'}}) }}</div>
+        <div class="col">{{ form_row(form.name, {'attr' : {'class' : 'lastContact'}}) }}</div>
+    </div>
+    <div class="row">
+        <div class="col">{{ form_row(form.phone, {'attr' : {'class' : 'phoneContact'}}) }}</div>
+        <div class="col">{{ form_row(form.email, {'attr' : {'class' : 'emailContact'}}) }}</div>
+    </div>
+    {{ form_row(form.message, {'attr' : {'class' : 'messageContact'}}) }}
+    <br>
+    {{ form_row(form.enregistrer, {'attr' : {'class': 'contactSubmit btn btn-primary'}}) }}
+</div>
+{{ form_end(form) }}

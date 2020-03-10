@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Portfolio - Brice Lauterbach {% endblock title %}
+
+{% block content %}
+
+    <div class="hautDePage">
+        <div class="hdp_title">
+            <h1>Portfolio</h1>
+        </div>
+        <div class="lesLiens">
+            <a href="{{ path('index') }}">Accueil</a>
+            <img src="{{ asset('assets/image/leftArrow.png') }}" id="arrow" alt="">
+            <a href="{{ path('portfolio') }}">Portfolio</a>
+        </div>
+        <br>
+    </div>
+    <br><br><br>
+    <div class="bgimg">
+        <div class="middle">
+            <h1>COMING SOON</h1>
+            <hr>
+            <p id="demo"></p>
+        </div>
+    </div>
+    <br><br><br>
+
+{% endblock content %}

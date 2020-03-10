@@ -1,0 +1,12 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<div class="enregistrement">
+    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    {{ form_widget(form) }}
+    <br>
+    <div class="boutonSubmit">
+        <div class="submit">
+            <input type="submit" value="Créer mon compte" class="form-control btn btn-primary" />
+        </div>
+    </div>
+    {{ form_end(form) }}
+</div>

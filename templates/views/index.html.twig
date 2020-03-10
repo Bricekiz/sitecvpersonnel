@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Site CV de Brice Lauterbach - Index {% endblock title %}
+
+{% block content %}
+
+    <div class="parallax">
+        <br><br>
+        <div class="container titleIndex">
+            <h1>Site CV de Brice Lauterbach</h1>
+        </div>
+        <br>
+        <h3 id="dev">Développeur Web & Web Mobile sur Bordeaux</h3>
+        <p class="container">Je viens de relever le challenge d'une reconvertion professionnelle dans le milieu du numérique après 5 ans
+        de carrière en boulangerie / pâtisserie. Je me présente à vous aujourd'hui en tant que développeur web & web mobile
+        full-stack junior en quête d'une nouvelle aventure dans un milieu qui me passionne et qui me donne envie
+        d'avancer et de progresser.</p>
+        <br>
+        <div class="boutton_set">
+            <div class="container boutton">
+                <a href="{{ path("contact") }}"><button class="btn btn-secondary" type="button">
+                        Contactez moi !
+                </button></a>
+                <a href="{{ path("portfolio") }}"><button class="btn btn-secondary" type="button">
+                        Mon Portfolio
+                    </button></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="container socialMedia">
+            <a href="https://www.facebook.com/brice.lauterbach/"><img src="{{ asset('assets/image/facebookLogo.png') }}" class="socialLogo" alt=""></a>
+            <a href="https://www.twitter.com/Brice_kiZ/"><img src="{{ asset('assets/image/twitterLogo.png') }}" class="socialLogo" alt=""></a>
+            <a href="https://www.linkedin.com/in/brice-lauterbach/"><img src="{{ asset('assets/image/linkedinLogo.png') }}" class="socialLogo" alt=""></a>
+            <a href="https://github.com/Bricekiz"><img src="{{ asset('assets/image/githubLogo.png') }}" class="socialLogo" alt=""></a>
+        </div>
+        <br><br>
+    </div>
+    <br><br>
+    <div class="container">
+        <h2 class="competence_title">Découvrez mes compétences</h2>
+        <br><br>
+        <div class="competence">
+            <div class="competence_resume">
+                <img src="{{ asset("assets/image/computerFrontIcon.png") }}" alt="">
+                <h4>Front-End</h4>
+                <p>Utilisant les langages HTML 5, CSS 3 pour la partie Front-End, je m'autoforme également à JavaScript et
+                jQuery ce qui me confère les connaissances nécessaires pour modifier un CMS ou pour m'adapter aux nouvelles
+                techniques des projets réalisés.</p>
+            </div>
+            <div class="competence_resume">
+                <img src="{{ asset("assets/image/responsiveIcon.png") }}" alt="">
+                <h4>Responsive Design</h4>
+                <p>Grâce aux langages cités précédemment, il m'est possible d'utiliser mes compétences en intégration et design
+                pour réaliser des sites qui s'adaptent à toutes les tailles de support.</p>
+            </div>
+            <div class="competence_resume">
+                <img src="{{ asset("assets/image/backEndIcon.png") }}" alt="">
+                <h4>Back-End</h4>
+                <p>Maitrisant PHP (et son framework Symfony particulièrement), il m'est possible de créer un site dans une
+                architecture MVC (Model View Controller) et également de gérer la gestion de bases de données.</p>
+            </div>
+            <!--<div class="competence_resume">
+                <img src="{{ asset("assets/image/securityIcon.png") }}" alt="">
+                <h4>Cyber Sécurité</h4>
+                <p></p>
+            </div>-->
+        </div>
+        <div class="container boutton">
+            <a href="{{ path("cv") }}">
+                <button class="btn btn-secondary" type="button">
+                    En Savoir Plus
+                </button>
+            </a>
+        </div>
+    </div>
+    <br>
+    <div class="portfolio">
+        <br><br>
+        <h1 class="portfolioTxt">Découvrez mes réalisations !</h1>
+        <p class="portfolioTxt">*Cliquez sur le Macbook !</p>
+        <a href="{{ path("portfolio") }}"><img src="{{ asset('assets/image/mockup.png') }}" alt="" class="mockup"></a>
+    </div>
+{% endblock content %}

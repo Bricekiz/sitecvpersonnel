@@ -1,0 +1,518 @@
+@font-face {
+    font-family: Amalfi;
+    src: url("../font/AmalfiCoast.ttf");
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Template - Header */
+
+main {
+    padding-top: 120px;
+}
+
+.topHeader {
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+    background: white;
+    z-index: 9999;
+}
+
+.logoBL {
+    width: 15%;
+}
+
+.navbarHeader {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    font-size: 16px;
+}
+
+.navbarHeader a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Template : Menu Burger */
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: rgb(226, 226, 226);
+    margin: 5px;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+    .logoBL, .burger {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logoBL{
+        width: 50%;
+    }
+    .navbarHeader {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 120px;
+        background: white;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        width: 100%;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* Template : Footer */
+
+.topFooter {
+    display: flex;
+    justify-items: center;
+    padding-top: 20px;
+    height: 60px;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Haut de page */
+
+.hautDePage {
+    background: lightgrey;
+    height: auto;
+}
+
+.hdp_title {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    }
+
+.lesLiens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.lesLiens a {
+    color: dodgerblue;
+}
+
+#arrow {
+    height: 20px;
+}
+
+/* INDEX */
+
+body, html {
+    height: 100%;
+}
+
+.mainSet {
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../image/parallax.jpg");
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax p {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.titleIndex h1, #dev {
+    color: white;
+    text-align: center;
+}
+
+.boutton_set {
+    display: flex;
+}
+
+.boutton {
+    text-align: center;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: space-around;
+}
+
+.socialLogo {
+    width: 50px;
+}
+
+.aboutMe {
+    display: flex;
+}
+
+.profilBL {
+    height: 350px;
+}
+
+.abouMeTxt {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.counterAtout {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.counter {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: url("../image/parallax.jpg");
+}
+
+.counter_title {
+    display: block;
+    position: absolute;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.counter_amount {
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    display: block;
+}
+
+.competence_title {
+    text-align: center;
+}
+
+.competence {
+    display: flex;
+    justify-content: space-between;
+}
+
+.competence_resume {
+    text-align: center;
+    width: 20%;
+}
+
+.competence_resume img {
+    width: 100px;
+}
+
+.portfolio {
+    /* The image used */
+    background-image: url("../image/img_parallax.jpg");
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.portfolioTxt {
+    color: white;
+}
+
+.mockup {
+    width: 1200px;
+}
+
+.mockup:hover {
+    opacity: 90%;
+}
+
+/* PAGE CV */
+
+.social {
+    height: 120px;
+    background: lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.adresse {
+    margin-top: -15px;
+    display: flex;
+}
+
+.adresse p {
+    margin-left: 5px;
+    }
+
+.aboutMeImg {
+    height: 20px;
+}
+
+/* Container for skill bars */
+.skills_bar {
+    width: 100%; /* Full width */
+    background-color: #ddd; /* Grey background */
+}
+
+.skills {
+    text-align: right; /* Right-align text */
+    padding-top: 10px; /* Add top padding */
+    padding-bottom: 10px; /* Add bottom padding */
+    color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: #4CAF50;} /* Green */
+.css {width: 90%; background-color: #2196F3;} /* Blue */
+.js {width: 20%; background-color: #f44336;} /* Red */
+.php {width: 70%; background-color: #808080;} /* Dark Grey */
+.sql {width: 60%; background-color: yellow;} /* Yellow */
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: lightgray;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.containers {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.containers::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid dodgerblue;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -12px;
+}
+
+.left::after {
+    right: -13px;
+}
+
+.timeline h4 {
+    color: dodgerblue;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: lightgray;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+.loisirs_resume {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Coming soon */
+
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+    height: 100%
+}
+
+.bgimg {
+    /* Center the background image */
+    background-position: center;
+    /* Scale and zoom in the image */
+    background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+    position: relative;
+    /* Add a white text color to all elements inside the .bgimg container */
+    color: black;
+    /* Add a font */
+    font-family: "Courier New", Courier, monospace;
+    /* Set the font-size to 25 pixels */
+    font-size: 25px;
+}
+
+/* Position text in the middle */
+.middle {
+    text-align: center;
+}
+
+/* Style the <hr> element */
+hr {
+    margin: auto;
+    width: 40%;
+}
+

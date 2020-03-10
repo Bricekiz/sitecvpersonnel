@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    <header>
+        <div class="topHeader">
+            <img src="{{ asset('assets/image/LOGOBL.png') }}" alt="Logo" class="logoBL">
+            <ul class="navbarHeader">
+                <li>
+                    <a href="{{ path('index') }}">Accueil</a>
+                </li>
+                <li>
+                    <a href="{{ path('portfolio') }}">Portfolio</a>
+                </li>
+                <li>
+                    <a href="{{ path('cv') }}">Mon CV</a>
+                </li>
+                <li>
+                    <a href="{{ path('blog') }}">Blog</a>
+                </li>
+                <li>
+                    <a href="{{ path('contact') }}">Contact</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('assets/js/app.js') }}"></script>
+            <script src="{{ asset('assets/js/app2.js') }}"></script>
+            <script src="{{ asset('assets/js/app3.js') }}"></script>
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="topFooter">
+            <div class="container footer">
+                <p>Brice Lauterbach | © 2020 - Tous droits réservés | <a href="{{ path('mentionsLegales') }}">Mentions légales</a></p>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    {% if is_granted ('ROLE_ADMIN') %}
+                        <a href="{{ path('adminIndex') }}"><p>Accès à Zone Admin</p></a>
+                        {% endif %}
+                    {% else %}
+                        <p><a class="log" href="{{ path('fos_user_security_login') }}">Connexion</a></p>
+                    {% endif %}
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>

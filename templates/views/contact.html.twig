@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Contact - Brice Lauterbach {% endblock title %}
+
+{% block content %}
+
+    <div class="hautDePage">
+        <div class="hdp_title">
+            <h1>Contact</h1>
+        </div>
+        <div class="lesLiens">
+            <a href="{{ path('index') }}">Accueil</a>
+            <img src="{{ asset('assets/image/leftArrow.png') }}" id="arrow" alt="">
+            <a href="{{ path('contact') }}">Contact</a>
+        </div>
+        <br>
+    </div>
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% for message in app.flashes('erreur') %}
+    <div class="alert alert-danger">
+        {{ message }}
+    </div>
+    {% endfor %}
+
+    {{ form_start(form) }}
+
+    <label for="formView.firstname">Votre prénom</label>
+    {{ form_widget(form.firstname, {
+        'attr' : {'class': ''}}) }}
+    <br>
+    <label for="formView.name">Votre nom</label>
+    {{ form_widget(form.name, {
+        'attr' : {'class': ''}}) }}
+    <br><br>
+    <label for="formView.phone">Votre numéro de téléphone</label>
+    {{ form_widget(form.phone,
+        {'attr' : {'class': ''}}) }}
+    <br>
+    <label for="formView.phone">Votre email</label>
+    {{ form_widget(form.mail,
+        {'attr' : { }}) }}
+    <br>
+    <label for="formView.phone">Votre message</label>
+    {{ form_widget(form.message,
+        {'attr' : { }}) }}
+    <br>
+    {{ form_widget(form.enregistrer,
+        {'attr' : {'class': 'btn btn-primary'}}) }}
+
+    {{ form_end(form) }}
+
+{% endblock content %}

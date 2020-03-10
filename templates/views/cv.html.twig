@@ -1,0 +1,212 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} CV de Brice Lauterbach {% endblock title %}
+
+{% block content %}
+
+    <div class="hautDePage">
+        <div class="hdp_title">
+            <h1>CV de Brice Lauterbach</h1>
+        </div>
+        <div class="lesLiens">
+            <a href="{{ path('index') }}">Accueil</a>
+            <img src="{{ asset('assets/image/leftArrow.png') }}" id="arrow" alt="">
+            <a href="{{ path('cv') }}">Mon CV</a>
+        </div>
+        <br>
+    </div>
+    <br><br>
+    <div class="container aboutMe">
+        <div class="col-4">
+            <img src="{{ asset("assets/image/profilBL.jpg") }}" alt="Photo de Brice Lauterbach" class="profilBL">
+        </div>
+        <div class="col-4">
+            <h4>Brice Lauterbach, 22 ans.</h4>
+            <h6>Développeur Web & Web Mobile Junior</h6>
+            <br>
+            <p>Adresse :</p>
+            <div class="adresse">
+                <img src="{{ asset('assets/image/positionLogo.png') }}" class="aboutMeImg" alt="">
+                <p>Bègles, Gironde, 33130 FRANCE</p>
+            </div>
+            <p>Email :</p>
+            <div class="adresse">
+                <img src="{{ asset('assets/image/mailLogo.png') }}" class="aboutMeImg" alt="">
+                <p>lauterbach.brice@gmail.com</p>
+            </div>
+            <p>Site :</p>
+            <div class="adresse">
+                <img src="{{ asset('assets/image/webLogo.png') }}" class="aboutMeImg" alt="">
+                <p> bricelauterbach.com</p>
+            </div>
+            <p>Site :</p>
+            <div class="adresse">
+                <img src="{{ asset('assets/image/codelogo.png') }}" class="aboutMeImg" alt="">
+                <p>1 année</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <h4>Mes atouts</h4>
+            <ul class="counterAtout">
+                <li class="counter">
+                    <span class="counter_title">Bonne Humeur</span>
+                    <span class="counter_amount">
+                        <span class="counter_amount_number">300%</span>
+                    </span>
+                </li>
+                <br>
+                <li class="counter">
+                    <span class="counter_title">Curiosité</span>
+                    <span class="counter_amount">
+                        <span class="counter_amount_number">100%</span>
+                    </span>
+                </li>
+                <br>
+                <li class="counter">
+                    <span class="counter_title">Créativité</span>
+                    <span class="counter_amount">
+                        <span class="counter_amount_number">100%</span>
+                    </span>
+                </li>
+                <br>
+                <li class="counter">
+                    <span class="counter_title">Esprit d'équipe</span>
+                    <span class="counter_amount">
+                        <span class="counter_amount_number">100%</span>
+                    </span>
+                </li>
+                <br>
+                <li class="counter">
+                    <span class="counter_title">Adaptation</span>
+                    <span class="counter_amount">
+                        <span class="counter_amount_number">9999%</span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br><br>
+    <div class="container social">
+        <a href="https://www.facebook.com/brice.lauterbach/"><img src="{{ asset('assets/image/facebookLogo.png') }}"
+                                                                  class="socialLogo" alt=""></a>
+        <a href="https://www.twitter.com/Brice_kiZ/"><img src="{{ asset('assets/image/twitterLogo.png') }}"
+                                                          class="socialLogo" alt=""></a>
+        <a href="https://www.linkedin.com/in/brice-lauterbach/"><img src="{{ asset('assets/image/linkedinLogo.png') }}"
+                                                                     class="socialLogo" alt=""></a>
+        <a href="https://github.com/Bricekiz"><img src="{{ asset('assets/image/githubLogo.png') }}" class="socialLogo"
+                                                   alt=""></a>
+    </div>
+    <br><br>
+    <!--<div class="skill container">
+        <p>HTML</p>
+        <div class="skills_bar">
+            <div class="skills html">90%</div>
+        </div>
+
+        <p>CSS</p>
+        <div class="skills_bar">
+            <div class="skills css">90%</div>
+        </div>
+
+        <p>JavaScript</p>
+        <div class="skills_bar">
+            <div class="skills js">20%</div>
+        </div>
+
+        <p>PHP</p>
+        <div class="skills_bar">
+            <div class="skills php">70%</div>
+        </div>
+
+        <p>MySQL</p>
+        <div class="skills_bar">
+            <div class="skills sql">60%</div>
+        </div>
+    </div>-->
+
+    <div class="resume container">
+        <h4 id="resume">
+            Fort d'évoluer dans un avenir et une métier qui me plaît, je met à vôtre disposition mes capacités,
+            mes connaissances, mon PHP, ma rage d'en apprendre d'avantage, de créer, et ma bonne humeur en
+            espérant acquerir une place dans votre société. Mon soucis sera de satisfaire le travail confié et
+            de rendre heureux la clientéle.
+        </h4>
+    </div>
+    <br><br>
+    <div class="container social">
+        <h1>Expériences</h1>
+    </div>
+    <div class="timeline">
+        <div class="containers left">
+            <div class="content">
+                <h4>Développement d'un site CV Personnel</h4>
+                <h6>@ Personnel | Janvier 2020 - Aujourd'hui </h6>
+                <p> • Intégration web HTML5 | CSS3 | Bootstrap | Twig | JavaScript | jQuerry <br>
+                    • Création de bases de données (MySQL) <br>
+                    • Programmation PHP Symfony modèle MVC </p>
+            </div>
+        </div>
+        <div class="containers right">
+            <div class="content">
+                <h4>Développement du site GeekBox.com</h4>
+                <h6>@ La Pisicne | Avril 2019 - Septembre 2019</h6>
+                <p> • Coneption d'interface utilisateur UX, prototypage du site <br>
+                    • Intégration web HTML5 | CSS3 | Bootstrap | JavaScript | jQuerry <br>
+                    • Symfony 4.3 : Framework PHP <br>
+                    • ORM Doctrine | FOS User Bundle | CKEditor | SwiftMailer <br>
+                    • Moteur de template Twig <br>
+                    • Travail en méthodologie AGILE </p>
+            </div>
+        </div>
+        <div class="containers left">
+            <div class="content">
+                <h4>Apprenti Boulanger puis Boulanger / Pâtissier</h4>
+                <h6>@ Au Panier Garni | @ Boulangerie Leloutre | @ Au Boulot Campagnard | 2014 - 2019</h6>
+                <p> • Nettoyage des ustensiles et du laboratoire <br>
+                    • Préparation et cuission de différentes sortes de pain
+                    • Réception des commandes et rangement</p>
+            </div>
+        </div>
+    </div>
+    <div class="container social">
+        <h1>Formations</h1>
+    </div>
+    <div class="timeline">
+        <div class="containers right">
+            <div class="content">
+                <h4>Titre RNCP Niveau III (BAC+2) - Développeur Web & Web Mobile</h4>
+                <h6>@ La Pisicne Bordeaux | Avril 2019 - Septembre 2019</h6>
+            </div>
+        </div>
+        <div class="containers left">
+            <div class="content">
+                <h4>Certification OPQUAST - Maîtrise de la qualité en projet web</h4>
+                <h6>@ OPQUAST | Octobre 2019 à Octobre 2024</h6>
+            </div>
+        </div>
+        <div class="containers right">
+            <div class="content">
+                <h4>Certificat d'Aptitude Professionnelle Boulanger</h4>
+                <h6>@ CFA Des Landes Mont-De-Marsan | Aout 2014 - Aout 2016</h6>
+            </div>
+        </div>
+        <div class="containers left">
+            <div class="content">
+                <h4>Brevet d'Études Professionnelles Transport</h4>
+                <h6>@ Lycée Professionnel Emile Combes Bègles | Septembre 2012 à Aout 2014</h6>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="aboutMe" class="container">
+        <p class="abouMeTxt">Après une courte carrière en boulangerie (5 ans) où j'ai appris le travail d'équipe,
+            la ponctualité, et d'autres qualités pouvant être mises à profit dans le métier de dev, j'ai décidé de
+            me réorienter dans un métier qui me passionne.</p>
+        <p>La formation qualifiante de "La Piscine Bordeaux" qui m'a permis d'obtenir un titre RNCP de niveau III (équivalent
+            BAC +2) en développement web & web mobile, m'a donné les outils pour concevoir, organiser, intégrer et animer
+            un site web. J'aimerais maintenant mettre en pratique mes compétences au sein d'une entreprise en tant que développeur
+            full-stack junior. Je perfectionne mes compétences quotidiennement en tant qu'auto-entrepreneur en réalisant à la fois,
+            des projets personnels et des demandes professionnelles de la part de mes clients.</p>
+    </div>-->
+
+{% endblock content %}
